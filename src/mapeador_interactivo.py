@@ -48,8 +48,12 @@ EXTENSIONES_PERMITIDAS = {
 CARPETAS_RAIZ_A_ESCANEAR = [
     Path.home() / "Documentos",
     Path.home() / "Escritorio",
-    Path.home() / "Descargas"
-]
+    Path.home() / "Descargas",
+    Path("C:/escaner"),
+    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/15 SEGURIDAD Y SALUD/09 CONTROL HORARIO"),
+    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/15 SEGURIDAD Y SALUD/18 UNIFORMIDAD"),
+    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/23 AUXILIAR")
+    ]
 
 # --- 3. LÓGICA DEL "PUESTO DE CONTROL" ---
 
