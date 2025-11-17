@@ -17,9 +17,9 @@ from src import utils
 # Aquí definimos DÓNDE buscar. Usamos Path.home() para
 # que funcione en Windows (C:\Users\santi) y Linux (/home/santi)
 CARPETAS_RAIZ_A_ESCANEAR = [
-    Path.home() / "Documentos",
-    Path.home() / "Escritorio",
-    Path.home() / "Descargas"
+    Path.home() / "Documents",
+    Path.home() / "Desktop",
+    Path.home() / "Downloads"
     # Añade aquí más carpetas raíz si lo necesitas
     # Path("C:/Proyectos") # Ejemplo de ruta absoluta si es necesario
 ]
