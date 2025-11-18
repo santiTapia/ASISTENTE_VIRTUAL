@@ -21,7 +21,7 @@ CARPETAS_IGNORADAS = {
     "Windows", "Program Files", "Program Files (x86)", "ProgramData",
     "AppData", "Local Settings", "Application Data",
     "$Recycle.Bin", "System Volume Information", "Recovery", "Config.Msi",
-    "PerfLogs", "Microsoft",
+    "PerfLogs", "Microsoft", "!WGUA.Bin",
     
     # -- LINUX (Portabilidad) --
     "usr", "bin", "etc", "var", "proc", "sys", "dev", "run", "snap",
@@ -45,7 +45,9 @@ EXTENSIONES_IGNORADAS = {
     # -- SISTEMA / BINARIOS / EJECUTABLES --
     ".dll", ".sys", ".exe", ".msi", ".bat", ".sh", ".com", ".vbs", ".cmd",
     ".lnk", ".ini", ".dat", ".bin", ".iso", ".vmdk", ".vdi", ".img",
-    ".reg", ".rec", ".pf", ".swp",
+    ".reg", ".rec", ".pf", ".swp", ".class", ".backup", ".p12", ".user", ".vsidx", 
+    ".v2", ".sln", ".pdb", ".cache", ".settings", ".up2date", ".dpb", ".cat", 
+    ".inf", ".gpd", ".cfg"
     
     # -- BASES DE DATOS (Evitar bucles) --
     ".db", ".sqlite", ".sqlite3", ".mdb", ".accdb", ".db-journal", ".ldb",
@@ -61,9 +63,12 @@ EXTENSIONES_IGNORADAS = {
     # -- CAD (Archivos de Bloqueo - ¡IMPORTANTE!) --
     ".dwl", ".dwl2", # Archivos de lock de AutoCAD, son ruido puro.
     ".bak", ".sv$",  # Backups automáticos de CAD (pueden llenar el disco)
+
+    # -- MULTIMEDIA --
+    ".3g2", ".3gp", ".mp4", ".mpeg", ".mpg", ".flv", ".avi", ".wma", ".wmv",
     
     # -- OTROS --
-    ".err", ".rdp", ".gp3", ".gp", ".lock"
+    ".err", ".rdp", ".gp3", ".gp", ".lock",
 }
 
 # --- 4. WHITELIST DE EXTENSIONES (Procesar SIEMPRE) ---
@@ -73,14 +78,23 @@ EXTENSIONES_PERMITIDAS = {
     
     # -- CÓDIGO --
     ".py", ".json", ".toml", ".css", ".html", ".js", ".ts", ".sql", ".xml", ".yaml", ".yml",
+    ".c", ".cpp", ".cs", ".java", ".config", ".ico", ".resx", ".csproj", ".props", ".targets",
     
     # -- CAD / 3D --
     ".fcstd", ".blend", ".dwg", ".dxf", ".rvt", ".rfa", ".ifc", ".stl", ".obj",
+    ".pc3", ".ctb", ".pzh", ".3dm", ".sat", ".skp",
     
     # -- IMÁGENES (Activos visuales) --
     ".svg", ".png", ".jpg", ".jpeg", ".bmp", ".webp", ".tiff",
+
+    # -- MULTIMEDIA -- 
+    ".aep", ".ai", ".aif", ".ait", ".eps", ".exif", ".jpe", ".gif",
     
     # -- OFIMÁTICA --
-    ".ods", ".odt", ".odp", ".eml", ".mbox",
-    ".xlsx", ".docx", ".pptx", ".pdf", ".csv"
+    ".ods", ".odt", ".odp", ".eml", ".mbox", ".xlsx", ".docx", ".pptx", ".pdf", ".csv",
+    ".docb", ".docm", ".dotm", ".dotx", ".potm", ".potx", ".ppam", ".ppsm", ".ppsx", 
+    ".pptm", ".rtf", ".text", ".wps", ".xls", ".xlsb", ".xlsm", ".xltm", ".xltx",
+
+    # -- COMPRESIÓN ARCHIVOS -- 
+     ".7z", ".rar",
 }
