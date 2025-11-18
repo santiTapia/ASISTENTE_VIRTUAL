@@ -11,30 +11,17 @@ from pathlib import Path
 try:
     from src import gestor_db
     from src import utils
-    from src.mapeador_interactivo import CARPETAS_RAIZ_A_ESCANEAR, CARPETAS_IGNORADAS, EXTENSIONES_IGNORADAS
+    from src.config_scanner import CARPETAS_RAIZ_A_ESCANEAR, CARPETAS_IGNORADAS, EXTENSIONES_IGNORADAS
 except ImportError:
     # Fallback por si la ruta de importación falla
     import gestor_db
     import utils
     # Necesitamos las mismas listas de seguridad
 
-    CARPETAS_RAIZ_A_ESCANEAR = [
-    Path.home() / "Documents",
-    Path.home() / "Desktop",
-    Path.home() / "Downloads",
-    Path("C:/escaner"),
-    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/15 SEGURIDAD Y SALUD/09 CONTROL HORARIO"),
-    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/15 SEGURIDAD Y SALUD/18 UNIFORMIDAD"),
-    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/23 AUXILIAR")
-    ]
-    CARPETAS_IGNORADAS = {".venv", "AppData"}
-    EXTENSIONES_IGNORADAS = {".tmp", ".log"}
-
 class GestorEventosHandler(FileSystemEventHandler):
     """
     Clase que define qué hacer cuando Watchdog detecta un evento.
     """
-
     def __init__(self):
         super().__init__()
         # Usamos las listas de seguridad del mapeador
@@ -49,7 +36,7 @@ class GestorEventosHandler(FileSystemEventHandler):
         
         # 1. Comprobar extensiones y nombre de archivo
         extension = ruta_path.suffix.lower()
-        filename = ruta_path.name # 👈 ¡La corrección! Obtenemos el nombre aquí.
+        filename = ruta_path.name # ¡La corrección! Obtenemos el nombre aquí.
         
         # Ignoramos la extensión y los temporales de Office
         if extension in self.extensiones_ignoradas or filename.startswith("~$"):

@@ -1,8 +1,9 @@
 # src/mapeador_inicial.py
+# NO SIRVE AHORA ---------------- APARCADO PARA CUANDO SE NECESITE - SUSTITUIDO POR MAPEADOR INTERACTIVO 17/11/25 -------------------------
 # Este script se ejecuta UNA VEZ para escanear tus carpetas
 # y poblar la base de datos 'Activos' por primera vez.
 
-from pathlib import Path  # 👈 ¡La clave de la portabilidad!
+from pathlib import Path  # ¡La clave de la portabilidad!
 import os
 import time
 

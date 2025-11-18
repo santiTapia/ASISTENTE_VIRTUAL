@@ -20,45 +20,11 @@ except ImportError:
 # (Pega aquí las listas CARPETAS_IGNORADAS, EXTENSIONES_IGNORADAS
 # y EXTENSIONES_PERMITIDAS que definimos arriba)
 
-# --- (Pega las listas aquí) ---
-CARPETAS_IGNORADAS = {
-    "Windows", "Program Files", "Program Files (x86)", "ProgramData",
-    "AppData", "Local Settings", "Application Data",
-    "$Recycle.Bin", "System Volume Information", ".cache", "Temp", "tmp",
-    ".venv", "__pycache__", "node_modules", ".git", ".vscode", ".idea",
-    ".dropbox.cache", ".stversions"
-}
-
-EXTENSIONES_IGNORADAS = {
-    ".key", ".pem", ".token", ".env", ".secret", ".pfx", ".crt", ".cer",
-    "id_rsa", "known_hosts", ".dll", ".sys", ".exe", ".msi", ".bat", ".sh", ".com", ".vbs",
-    ".lnk", ".ini", ".dat", ".bin", ".iso", ".vmdk", ".vdi", ".db", ".sqlite",
-    ".sqlite3", ".mdb", ".accdb", ".db-journal", ".tmp", ".log", ".temp",
-    ".swp", ".bak", ".old", "thumbs.db", "~$",
-}
-
-EXTENSIONES_PERMITIDAS = {
-    ".md", ".txt", ".py", ".json", ".toml", ".css", ".html",
-    ".fcstd", ".blend", ".dwg", ".dxf", ".svg", ".png", ".jpg", ".jpeg",
-    ".ods", ".odt", ".odp", ".eml", ".mbox"
-}
-
-# --- 2. CONFIGURACIÓN DEL MAPEO ---
-
-CARPETAS_RAIZ_A_ESCANEAR = [
-    Path.home() / "Documents",
-    Path.home() / "Desktop",
-    Path.home() / "Downloads",
-    Path("C:/escaner"),
-    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/15 SEGURIDAD Y SALUD/09 CONTROL HORARIO"),
-    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/15 SEGURIDAD Y SALUD/18 UNIFORMIDAD"),
-    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/23 AUXILIAR")
-    ]
+from src.config_scanner import CARPETAS_RAIZ_A_ESCANEAR, CARPETAS_IGNORADAS, EXTENSIONES_IGNORADAS, EXTENSIONES_PERMITIDAS
 
 # --- 3. LÓGICA DEL "PUESTO DE CONTROL" ---
+# Este diccionario guardará tus decisiones para no preguntarte 1000 veces por la misma extensión (ej. .pdf)
 
-# Este diccionario guardará tus decisiones para no preguntarte 1000 veces
-# por la misma extensión (ej. .pdf)
 DECISIONES_CACHE = {}
 
 def manejar_decision_archivo(ruta_path, extension):
