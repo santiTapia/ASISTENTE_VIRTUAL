@@ -47,7 +47,7 @@ EXTENSIONES_IGNORADAS = {
     ".lnk", ".ini", ".dat", ".bin", ".iso", ".vmdk", ".vdi", ".img",
     ".reg", ".rec", ".pf", ".swp", ".class", ".backup", ".p12", ".user", ".vsidx", 
     ".v2", ".sln", ".pdb", ".cache", ".settings", ".up2date", ".dpb", ".cat", 
-    ".inf", ".gpd", ".cfg"
+    ".inf", ".gpd",
     
     # -- BASES DE DATOS (Evitar bucles) --
     ".db", ".sqlite", ".sqlite3", ".mdb", ".accdb", ".db-journal", ".ldb",
@@ -65,10 +65,10 @@ EXTENSIONES_IGNORADAS = {
     ".bak", ".sv$",  # Backups automáticos de CAD (pueden llenar el disco)
 
     # -- MULTIMEDIA --
-    ".3g2", ".3gp", ".mp4", ".mpeg", ".mpg", ".flv", ".avi", ".wma", ".wmv",
+    ".3g2", ".3gp", ".mp4", ".mpeg", ".mpg", ".flv", ".avi", ".wma", ".wmv", ".asf",
     
     # -- OTROS --
-    ".err", ".rdp", ".gp3", ".gp", ".lock",
+    ".err", ".rdp", ".gp3", ".gp", ".lock", ".doc", "editorconfig", ".resources"
 }
 
 # --- 4. WHITELIST DE EXTENSIONES (Procesar SIEMPRE) ---
@@ -82,7 +82,7 @@ EXTENSIONES_PERMITIDAS = {
     
     # -- CAD / 3D --
     ".fcstd", ".blend", ".dwg", ".dxf", ".rvt", ".rfa", ".ifc", ".stl", ".obj",
-    ".pc3", ".ctb", ".pzh", ".3dm", ".sat", ".skp",
+    ".pc3", ".ctb", ".pzh", ".3dm", ".sat", ".skp", ".lsp",
     
     # -- IMÁGENES (Activos visuales) --
     ".svg", ".png", ".jpg", ".jpeg", ".bmp", ".webp", ".tiff",
@@ -96,5 +96,5 @@ EXTENSIONES_PERMITIDAS = {
     ".pptm", ".rtf", ".text", ".wps", ".xls", ".xlsb", ".xlsm", ".xltm", ".xltx",
 
     # -- COMPRESIÓN ARCHIVOS -- 
-     ".7z", ".rar",
+     ".7z", ".rar"
 }
