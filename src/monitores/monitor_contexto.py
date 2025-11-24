@@ -13,7 +13,7 @@ except ImportError:
 
 # Tiempo de espera entre comprobaciones (en segundos).
 # Un valor bajo es más preciso, un valor alto consume menos CPU.
-TIEMPO_ENTRE_CHEQUEOS = 3
+TIEMPO_ENTRE_CHEQUEOS = 5
 
 def obtener_ventana_activa():
     """
@@ -55,10 +55,10 @@ def iniciar_monitor_contexto():
                 print(f"Contexto cambiado: -> {titulo_actual}")
                 
                 # 1. Insertamos el nuevo registro en la DB
-                gestor_db.insertar_registro(
-                    id_activo=None,              # Lo dejamos en NULL. El LLM lo vinculará después.
-                    tipo_accion='Foco_Ventana',  # Acción clave para el asistente
-                    detalle=titulo_actual
+                gestor_db.insertar_registro_accion(
+                    tipo='FOCO_VENTANA', # Acción clave para el asistente
+                    contexto=titulo_actual,
+                    id_activo=None # Lo dejamos en NULL. El LLM lo vinculará después.
                 )
                 
                 # 2. Actualizamos el último título

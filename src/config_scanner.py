@@ -12,7 +12,13 @@ CARPETAS_RAIZ_A_ESCANEAR = [
     # Rutas específicas de tu trabajo (OJO: Verifica que la unidad G: existe)
     Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/15 SEGURIDAD Y SALUD/09 CONTROL HORARIO"),
     Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/15 SEGURIDAD Y SALUD/18 UNIFORMIDAD"),
-    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/23 AUXILIAR")
+    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022/22_0001 AMARE NOVO SANTI PETRI/23 AUXILIAR"),
+    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022722_0001 AMARE NOVO SANTI PETRI/3 Contratacion"),
+    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022722_0001 AMARE NOVO SANTI PETRI/5 Proyectos"),
+    Path("G:/.shortcut-targets-by-id/1-hEFmLDxi7ep0x5rdxfSq4hpV6YEOQOM/CARPETA PROYECTOS WP/2022722_0001 AMARE NOVO SANTI PETRI/14 PRODUCCIÓN"),
+    Path("G:/.shortcut-targets-by-id/1-5uyydVCHYxnMsGtHgd0AZcUtVJYcmTH/2022_AMARE SANCTI PETRI/9-OBRA/01_ARQUITECTURA/PLANOS"),
+    Path("G:/.shortcut-targets-by-id/1-5uyydVCHYxnMsGtHgd0AZcUtVJYcmTH/2022_AMARE SANCTI PETRI/9-OBRA/02_ESTRUCTURA/PLANOS"),
+    Path("G:/.shortcut-targets-by-id/1-5uyydVCHYxnMsGtHgd0AZcUtVJYcmTH/2022_AMARE SANCTI PETRI/9-OBRA/04_INTERIORISMO")
 ]
 
 # --- 2. BLACKLIST DE CARPETAS (Ignorar SIEMPRE) ---
@@ -68,7 +74,7 @@ EXTENSIONES_IGNORADAS = {
     ".3g2", ".3gp", ".mp4", ".mpeg", ".mpg", ".flv", ".avi", ".wma", ".wmv", ".asf",
     
     # -- OTROS --
-    ".err", ".rdp", ".gp3", ".gp", ".lock", ".doc", "editorconfig", ".resources"
+    ".err", ".rdp", ".gp3", ".gp", ".lock", ".doc", ".editorconfig", ".resources"
 }
 
 # --- 4. WHITELIST DE EXTENSIONES (Procesar SIEMPRE) ---
